@@ -10,6 +10,9 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -349,6 +352,11 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+                <div class="row justify-content-center">
+                    <blockquote class="blockquote text-center"><p>You can contact me at my email :  julietarakal@gmail.com </p></blockquote>
+                    <blockquote class="blockquote text-center"><p> OR </p></blockquote>
+                    <blockquote class="blockquote text-center"><p> Fill in the form below :  </p></blockquote>
+                </div>
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
@@ -359,31 +367,33 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" onsubmit="sendEmail(); reset() ; return false">
+<!--                        <form id="contactForm" onsubmit="sendEmail(); reset() ;">-->
+                        <form id="contactForm" method="POST" action="https://formbold.com/s/6rkA9">
+<!--                            method="POST" action="https://formbold.com/s/6rkA9"-->
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" type="text" name="QueryFrom"placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <div id='name-error' class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <div id="email-error" class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div id="email-invalid" class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" name='phone' type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                                 <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <div id="phone-error" class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                                 <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <div id="message-error" class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                             <!-- Submit success message-->
                             <!---->
@@ -445,237 +455,174 @@
             </div>
         </footer>
         <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div id="copyright" class="container"><small>Copyright &copy; julietarakal.com 2022</small></div>
+        <div id="copyright"class="copyright py-4 text-center text-white">
+            <div id="copyright1" class="container"><small>Copyright &copy; julietarakal.com 2022</small></div>
         </div>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="test">Nothing
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Copyright Settings JS-->
+        <script>
+        //console.log(document.getElementById('copyright').innerText)
+        var yr = new Date().getFullYear();
+        document.getElementById('copyright').innerText = 'Copyright © julietarakal.com '+yr
+        </script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>console.p(document.getElementById('copyright'))</script>
-        <script>
-          function sendEmail(){
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = today.getFullYear();
-            today = dd + '-' + mm + '-' + yyyy;
-
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "julietarakal@gmail.com",
-                Password : "7448BA60CBF029493786BB28524950211D1C",
-                To : 'julietarakal@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "Query from julietarakal.github.io  on :"+today,
-                Body : "Message : "+document.getElementById("message").value
-                +"<br> Phone Number : "+document.getElementById('phone').value
-                +"<br> Name : "+document.getElementById('name').value
-            }).then(
-              message => alert('Message is sent to Juliet Arakal Successfully ')
-            );
-
-          }
-
-        </script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+        <script>
+        $('#contactForm').submit(function() {
+            if (!$('#name').val()){
+                $('#name-error').show();
+                $('#name').focus();
+                return false;
+            }
+            else{
+                $('#name-error').hide();
+            }
+
+            if (!$('#email').val()){
+               $('#email-error').show();
+               $('#email').focus();
+               return false;
+               }
+            else
+            {
+                $('#email-error').hide();
+            }
+            let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+            let s = $('#email').val();
+            if(!regex.test(s)){
+               $('#email-invalid').show();
+               $('#email').focus();
+               return false;
+            }
+            else{
+               $('#email-invalid').hide();
+            }
+            if (!$('#phone').val()){
+               $('#phone-error').show();
+               $('#phone').focus();
+               return false;
+               }
+            else
+            {
+                $('#phone-error').hide();
+            }
+
+            if (!$('#message').val()){
+               $('#message-error').show();
+               $('#message').focus();
+               return false;
+               }
+            else
+            {
+                $('#message-error').hide();
+            }
+        });
+        </script>
+
+        <!-- SMTP Email JS-->
+<!--        <script src="https://smtpjs.com/v3/smtp.js"></script>-->
+<!--        <script>-->
+<!--          function sendEmail(){-->
+<!--            var today = new Date();-->
+<!--            var dd = String(today.getDate()).padStart(2, '0');-->
+<!--            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!-->
+<!--            var yyyy = today.getFullYear();-->
+<!--            today = dd + '-' + mm + '-' + yyyy;-->
+
+<!--            Email.send({-->
+<!--                Host : 'smtp-relay.sendinblue.com',-->
+<!--                Port : '587',-->
+<!--                Username : 'anish.kavil@gmail.com',-->
+<!--                Password : 'ftIrhgDykQFn5PO2',-->
+<!--                To : 'anish.kavil@gmail.com',-->
+<!--                From : document.getElementById("email").value,-->
+<!--                Subject : "Query from julietarakal.github.io  on :"+today,-->
+<!--                Body : "Message : "+document.getElementById("message").value-->
+<!--                +"<br> Phone Number : "+document.getElementById('phone').value-->
+<!--                +"<br> Name : "+document.getElementById('name').value-->
+<!--            }).then(-->
+<!--              message => alert('Message is sent to Juliet Arakal Successfully ')-->
+<!--            );-->
+
+<!--          }-->
+
+<!--        </script>-->
+<!--        <script>-->
+<!--        $('#contactForm').submit(function() {-->
+<!--            $.ajax({-->
+<!--                          type: "POST",-->
+<!--                          url: "https://api.sendinblue.com/v3/smtp/email",-->
+<!--                          headers: JSON.stringify({-->
+<!--                            'accept': 'application/json',-->
+<!--                            'api-key': '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',-->
+<!--                            'content-type': 'application/json',-->
+<!--                            'Access-Control-Allow-Origin' : '*',-->
+<!--                            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',-->
+<!--                            'Access-Control-Allow-Headers': 'Accept,authorization,Authorization, Content-Type'-->
+<!--                                 }),-->
+<!--                          data: JSON.stringify({-->
+<!--                            'sender':{-->
+<!--                                    'name': 'Anish PK',-->
+<!--                                    "email": 'anish.pk@gmail.com'-->
+<!--                                     },-->
+<!--                            'to':[-->
+<!--                                    {-->
+<!--                                     'email': 'anish.kavil@gmail.com',-->
+<!--                                     'name': 'Anish Kavil'-->
+<!--                                    }-->
+<!--                                  ],-->
+<!--                            "subject":"Hello world",-->
+<!--                            "htmlContent":"<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Sendinblue.</p></body></html>",-->
+<!--                          }),-->
+<!--                        }).done(function(response) {-->
+<!--                           console.log(response); // if you're into that sorta thing-->
+<!--                     });-->
+<!--                                            });-->
+
+<!--        </script>-->
+<!--        <script>-->
+<!--        function sendEmail(){-->
+<!--            $.ajax({-->
+<!--                          type: "POST",-->
+<!--                          url: "https://api.sendinblue.com/v3/smtp/email",-->
+<!--                          header:{-->
+<!--                            "accept": "application/json",-->
+<!--                            "api-key": "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",-->
+<!--                            "content-type": "application/json"-->
+<!--                                 },-->
+<!--                          data: {-->
+<!--                            "sender":{-->
+<!--                                    "name":"Anish PK",-->
+<!--                                    "email":"anish.pk@gmail.com"-->
+<!--                                     },-->
+<!--                            "to":[-->
+<!--                                    {-->
+<!--                                     "email":"anish.kavil@gmail.com",-->
+<!--                                     "name":"Anish Kavil"-->
+<!--                                    }-->
+<!--                                  ],-->
+<!--                            "subject":"Hello world",-->
+<!--                            "htmlContent":"<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Sendinblue.</p></body></html>"-->
+<!--                          },-->
+<!--                          success: function( result ) {-->
+<!--                                                            $( "#test" ).html( "<strong>" + result + "</strong>" );-->
+<!--                                                      },-->
+<!--                          failure: function( result ) {-->
+<!--                                                            $( "#test" ).html( "<strong>" + result + "</strong>" );-->
+<!--                                                      }-->
+<!--                        }).done(function(response) {-->
+<!--                           console.log(response); // if you're into that sorta thing-->
+<!--                     });-->
+<!--        } // function send email terminated-->
+<!--        </script>-->
     </body>
 </html>
+
