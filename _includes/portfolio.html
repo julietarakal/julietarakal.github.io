@@ -1,0 +1,116 @@
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-12 col-lg-12 mb-2">
+                      <p class="masthead-subheading font-weight-light mb-0 text-left">
+                          {{site.data.content.portfolioitempart1}}
+                      </p><br>
+                        <p class="masthead-subheading font-weight-light mb-0 text-left">
+                        {{site.data.content.portfolioitempart2}}
+                        </p>
+                  </div>
+                </div><br>
+                <p class="alert alert-primary text-dark text-uppercase""><b>Documentary  /  English Explainer  /  English Advertisement  /  English News  /  Corporate Video - Voice Samples</b></p>
+                <div class="row justify-content-left">
+                    {% for item in site.data.content.corpvideos %}
+                        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 font-weight-bold">
+                            <p style="font-weight:bold"> {{item.name}} </p>
+                            <video width="320" height="150" controls>
+                                <source src="{{item.media}}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    {% endfor%}
+                </div><br><br>
+                <div class="row justify-content-left">
+                    {% for item in site.data.content.docuvideos %}
+                        <!-- Portfolio Item -->
+                        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <p style="font-weight:bold"> {{item.name}}</p>
+                            <video width="320" height="150" controls preload="metadata">
+                                <source src="{{item.media}}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    {% endfor%}
+                 </div><br>
+
+                <div class="row justify-content-left">
+                    {% for item in site.data.content.newsvideos %}
+                        <!-- Portfolio Item -->
+                        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <p style="font-weight:bold"> {{item.name}}</p>
+                            <video width="320" height="150" controls>
+                                <source src="{{item.media}}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    {% endfor%}
+                </div><br><br>
+
+                <div class="row justify-content-left">
+                    <p class="alert alert-primary text-dark text-uppercase"><b>IVRS Voice Samples</b></p>
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <p style="font-weight:bold"> English</p>
+                        {% for item in site.data.content.ivrsenglishaudios %}
+                            <audio preload="auto" controls="controls">
+                                <source src="{{item.media}}" type="audio/mp3">
+                                Your browser does not support the audio element.
+                            </audio>
+                        {% endfor%}
+
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <p style="font-weight:bold"> Hindi</p>
+                        {% for item in site.data.content.ivrshindiaudios %}
+                            <audio controls>
+                            <source src="assets/audio/hindi-ivrs.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                            </audio>
+                        {% endfor%}
+
+                    </div>
+
+                </div><br>
+                <div class="row justify-content-left">
+                    <p class="alert alert-primary text-dark text-uppercase"><b>E Learning Voice Samples</b></p>
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <p style="font-weight:bold"> English</p>
+                        {% for item in site.data.content.elearningenglishaudios %}
+                            <audio preload="auto" controls="controls">
+                            <source src="{{item.media}}" type="audio/mp3">
+                            Your browser does not support the audio element.
+                            </audio>
+                        {% endfor%}
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <p style="font-weight:bold"> Hindi</p>
+                        {% for item in site.data.content.elearninghindiaudios %}
+                            <audio preload="auto" controls="controls">
+                            <source src="{{item.media}}" type="audio/mp3">
+                            Your browser does not support the audio element.
+                            </audio>
+                        {% endfor%}
+                    </div>
+                </div><br>
+                <div class="row justify-content-left">
+                    <p class="alert alert-primary text-dark text-uppercase"><b> You Tube Channel - Voice Samples</b></p>
+                    {% for item in site.data.content.youtubevoiceaudios %}
+                        <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <video width="320" height="150" controls>
+                                <source src="{{item.media}}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    {% endfor%}
+                </div>
+            </div>

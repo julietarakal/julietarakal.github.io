@@ -1,0 +1,47 @@
+name: Juliet Arakal
+title: Voice Over Professional - Juliet Arakal
+mainsectionpart1: A Voice Over Artist and an English Newsreader with All India Radio. Based out of Bangalore,India with a Home Studio Setup
+mainsectionpart2: Languages for Voiceover - English ( Indian Neutral Accent ) & Hindi
+address: >
+  19081 , Tower 19 Prestige Ferns Residency 
+  Haralur Road , Bangalore South 560102 Karnataka India
+portfolioitempart1: >
+  Voice Description : Clear diction and pronunciation (UK) ; Deep , warm , professional and authoritative voice. Classy for narration , 
+  training modules and documentary, corporate films, IVRs , advertisements, story telling and news.
+portfolioitempart2: >
+  I have provided voice over for Educomp, IGNOU . Currently providing IVRS for Airtel and Vodafone, voice overs for YouTube channels, 
+  advertisements and various e-learning content as a  full time freelancer.
+about: >
+  I am a voice over artist and an English Newsreader with All India Radio. 
+  I have done professional voice over for documentaries and e-Learning projects.
+  I have a clear diction, warm authoritative voice which is suitable for wide range of assignments.
+contactmetext: >
+  You can contact me at my email : julietarakal@gmail.com <br> OR <br> Fill in the form below :
+corpvideos:
+  - name: Corporate Video - AU Bank - Tap N Pay
+    media: assets/videos/tap-n-pay.mp4
+  - name: English Advertisement - Arya Group of Colleges
+    media: assets/videos/arya-college.mp4
+docuvideos:
+  - name: English Documentary - The Nand & Jeet Khemka Foundation
+    media: assets/videos/the-nand-jeet-khemka-foundation.mp4#t=0.5
+  - name: English Explainer Video - Fertilator - Product Launch
+    media: assets/videos/fertilator.mp4
+  - name: English News Coverage - Covid 19
+    media: assets/videos/covid19-news.mp4
+newsvideos:
+  - name: English News from the Studio of All India Radio
+    media: assets/videos/air-news.mp4
+ivrsenglishaudios:
+  - media: assets/audio/english-ivrs.mp3
+ivrshindiaudios:
+  - media: assets/audio/hindi-ivrs.mp3
+elearningenglishaudios:
+  - media: assets/audio/e-learning-english.mp3
+  - media: assets/audio/e-learning-english-instructional.mp3
+elearninghindiaudios:
+  - media: assets/audio/e-learning-hindi.mp3
+  - media: assets/audio/e-learning-hindi-religious.mp3
+youtubevoiceaudios:
+  - media: assets/videos/smoky-rich-wives.mp4
+  - media: assets/videos/smoky-raveena-tandon.mp4

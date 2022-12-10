@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     {% include header.html %}
+    </head>
+    <body id="page-top">
+<!--         Navigation-->
+            {% include navigator.html %}
+
+            {{content}}
+
+<!--         Footer&ndash;&gt;-->
+            <footer class="footer text-center">
+                {% include footer.html %}
+            </footer>
+<!--         Copyright Section&ndash;&gt;-->
+             <div id="copyright"class="copyright py-4 text-center text-white">
+                <div id="copyright1" class="container"><small>Copyright &copy; julietarakal.com 2022</small></div>
+            </div>
+            {% include scripts.html %}
+    </body>
+</html>
