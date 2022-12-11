@@ -1,0 +1,66 @@
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Copyright Settings JS-->
+        <script>
+        //console.log(document.getElementById('copyright').innerText)
+        var yr = new Date().getFullYear();
+        document.getElementById('copyright').innerText = 'Copyright © julietarakal.com '+yr
+        </script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+        <script>
+        $('#contactForm').submit(function() {
+            if (!$('#name').val()){
+                $('#name-error').show();
+                $('#name').focus();
+                return false;
+            }
+            else{
+                $('#name-error').hide();
+            }
+
+            if (!$('#email').val()){
+               $('#email-error').show();
+               $('#email').focus();
+               return false;
+               }
+            else
+            {
+                $('#email-error').hide();
+            }
+            let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+            let s = $('#email').val();
+            if(!regex.test(s)){
+               $('#email-invalid').show();
+               $('#email').focus();
+               return false;
+            }
+            else{
+               $('#email-invalid').hide();
+            }
+            if (!$('#phone').val()){
+               $('#phone-error').show();
+               $('#phone').focus();
+               return false;
+               }
+            else
+            {
+                $('#phone-error').hide();
+            }
+
+            if (!$('#message').val()){
+               $('#message-error').show();
+               $('#message').focus();
+               return false;
+               }
+            else
+            {
+                $('#message-error').hide();
+            }
+        });
+        </script>
