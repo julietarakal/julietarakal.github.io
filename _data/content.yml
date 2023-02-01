@@ -22,11 +22,13 @@ corpvideos:
     media: assets/videos/tap-n-pay.mp4
   - name: English Advertisement - Arya Group of Colleges
     media: assets/videos/arya-college.mp4
+  - name: English Advertisement - Reprosci
+    media: assets/videos/reprosci.mp4
 docuvideos:
   - name: English Documentary - The Nand & Jeet Khemka Foundation
     media: assets/videos/the-nand-jeet-khemka-foundation.mp4#t=0.5
   - name: English Explainer Video - Fertilator - Product Launch
-    media: assets/videos/fertilator.mp4
+    media: assets/videos/Fertilator.mp4
   - name: English News Coverage - Covid 19
     media: assets/videos/covid19-news.mp4
 newsvideos:
