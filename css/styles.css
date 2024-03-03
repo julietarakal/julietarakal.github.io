@@ -11436,11 +11436,16 @@ html {
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
-  line-height: 2.75rem;
+  line-height: 1.75rem;
 }
 .masthead .masthead-subheading {
-  font-size: 1.25rem;
+  font-size: 2.75rem;
+  font-weight: bold;
 }
+.masthead .masthead-subheading-minor {
+  font-size: 1.20rem;
+}
+
 .masthead .masthead-avatar {
   width: 15rem;
 }

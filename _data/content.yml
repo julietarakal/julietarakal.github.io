@@ -1,22 +1,35 @@
 name: Juliet Arakal
 title: Voice Over Professional - Juliet Arakal
-mainsectionpart1: A Voice Over Artist and an English Newsreader with All India Radio. Based out of Bangalore,India with a Home Studio Setup
+mainsectionpart1: Welcome to Juliet Arakal's Voice Over Services!
+mainsectionpart1a1: > 
+  A Voice Over Artist and an English Newsreader with All India Radio. Based out of Bangalore,
+  India with a Home Studio Setup
+mainsectionpart1: Are you in need of a professional voice to bring your project to life? Look no further !
 mainsectionpart2: Languages for Voiceover - English ( Indian Neutral Accent ) & Hindi
 address: >
   19081 , Tower 19 Prestige Ferns Residency 
   Haralur Road , Bangalore South 560102 Karnataka India
 portfolioitempart1: >
-  Voice Description : Clear diction and pronunciation (UK) ; Deep , warm , professional and authoritative voice. Classy for narration , 
-  training modules and documentary, corporate films, IVRs , advertisements, story telling and news.
+  <p style="font-size: 1.25rem">With a rich portfolio including projects for AIRTEL, VODAFONE, BSNL, IGNOU, EDUCOMP (e-Learning content) 
+  and ongoing collaborations
+  with major companies like BAJAJ, HINDUSTAN UNILEVER and Advertising Agencies, I bring expertise and professionalism
+  to every project I undertake. <BR><BR>
+  Curious about my style and tone ?   Here's  a glimpse of what I can do :</p>
 portfolioitempart2: >
-  I have provided voice over for Educomp, IGNOU . Currently providing IVRS for Airtel and Vodafone, voice overs for YouTube channels, 
-  advertisements and various e-learning content as a  full time freelancer.
 about: >
-  I am a voice over artist and an English Newsreader with All India Radio. 
-  I have done professional voice over for documentaries and e-Learning projects.
-  I have a clear diction, warm authoritative voice which is suitable for wide range of assignments.
+  I am Juliet Arakal, a seasoned Voice Over Artist and an English Newsreader with All India Radio. 
+  Based in Pune, I operate from a fully-equipped home studio setup, ensuring top notch quality
+  and timely delivery of projects.<br><br> From commercials to corporate videos, youtube channels to 
+  educational content, I offer a diverse range of voice over services. 
+  <BR><BR><b><p style="font-size: 1.75rem">Why Choose Me ?</p></b><br>
+  <p style="font-size: 1.25rem">Whether you need a warm and friendly voice or an authoritative and professional tone, I tailor my delivery to suit
+  your specific requirements. My clear and articulate voice, coupled with just the right amount of emotion, ensures effective 
+  communication of your message to the audience.</p>
 contactmetext: >
-  You can contact me at my email : julietarakal@gmail.com <br> OR <br> Fill in the form below :
+  <p style="font-size: 1.75rem">Let's Collaborate !</p><br>
+  I am comfortable working with a wide range of scripts, guaranteeing a seamless experience from start to finish. I look
+  forward to the opportunity to work with you and bring your project to life. <br><br>
+  You can contact me on my email : julietarakal@gmail.com <br> OR <br> Fill in the form below :
 corpvideos:
   - name: English Advertisement - Home Credit - Personal Loan
     media: assets/videos/home-credit-personal-loan.mp4
@@ -36,6 +49,8 @@ docuvideos:
 newsvideos:
   - name: English News from the Studio of All India Radio
     media: assets/videos/air-news.mp4
+  - name: English News from the Studio of All India Radio
+    media: assets/videos/air-news-2.mp4
 ivrsenglishaudios:
   - media: assets/audio/english-ivrs.mp3
 ivrshindiaudios:
@@ -47,5 +62,5 @@ elearninghindiaudios:
   - media: assets/audio/e-learning-hindi.mp3
   - media: assets/audio/e-learning-hindi-religious.mp3
 youtubevoiceaudios:
-  - media: assets/videos/smoky-rich-wives.mp4
-  - media: assets/videos/smoky-raveena-tandon.mp4
+  - media: assets/videos/eng-saffaronoil-ad.mp4
+  - media: assets/videos/eng-incensestick-ad.mp4

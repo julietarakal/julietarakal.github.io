@@ -106,6 +106,7 @@
                     <p class="alert alert-primary text-dark text-uppercase"><b> You Tube Channel - Voice Samples</b></p>
                     {% for item in site.data.content.youtubevoiceaudios %}
                         <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                            <p style="font-weight:bold"> {{item.name}}</p>
                             <video width="320" height="150" controls>
                                 <source src="{{item.media}}" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -113,4 +114,6 @@
                         </div>
                     {% endfor%}
                 </div>
+
+
             </div>
